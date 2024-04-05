@@ -1,0 +1,19 @@
+version: "3"
+
+services:
+  app:
+    build: .
+    ports:
+      - "8000:8000"
+    restart: unless-stopped
+
+  nginx:
+    restart: unless-stopped
+    image: nginx
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./nginx:/etc/nginx/user_conf.d:ro
+    depends_on:
+      - app
