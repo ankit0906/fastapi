@@ -24,7 +24,7 @@ jobs:
         with:
           context: .
           push: true
-          tags: ankitdockerhub1/myfastapi:latest
+          tags: ankitdockerhub1/myfastapiapp:latest
 
       - name: SSH into server and update Docker container
         uses: appleboy/ssh-action@master
