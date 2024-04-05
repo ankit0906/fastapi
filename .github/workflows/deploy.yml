@@ -24,7 +24,7 @@ jobs:
         with:
           context: .
           push: true
-          tags: yourdockerusername/yourimage:latest
+          tags: ankitdockerhub1/yourimage:latest
 
       - name: SSH into server and update Docker container
         uses: appleboy/ssh-action@master
@@ -34,5 +34,5 @@ jobs:
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           port: 22
           script: |
-            docker-compose -f /path/to/your/docker-compose.yml pull
-            docker-compose -f /path/to/your/docker-compose.yml up -d
+            docker-compose -f /home/ubuntu/fastapi/docker-compose.yml pull
+            docker-compose -f /home/ubuntu/fastapi/docker-compose.yml up -d
