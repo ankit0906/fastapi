@@ -34,5 +34,5 @@ jobs:
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           port: 22
           script: |
-            docker-compose -f /home/ubuntu/fastapi/docker-compose.yml pull
-            docker-compose -f /home/ubuntu/fastapi/docker-compose.yml up -d
+            docker-compose -f ./docker-compose.yml pull
+            docker-compose -f ./docker-compose.yml up -d
